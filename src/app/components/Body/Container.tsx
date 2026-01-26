@@ -1,10 +1,14 @@
+'use client'
+import Experience from "./components/Experience/Experience"
+import Introduction from "./components/Introduction/Introduction"
 import "./Container.css"
 
-const Container = () => {
+const Container = (props: { language: string }) => {
     return (
-        <div>
-
-        </div>
+        <>
+            <Introduction language={props.language} />
+            <Experience language={props.language} />
+        </>
     )
 }
 

@@ -1,0 +1,128 @@
+.timeline-line {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.spacer {
+    width: 40%;
+    height: 100%;
+}
+
+.experience-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 2px;
+    padding: 70px 25px 30px 25px;
+}
+
+.left-side {
+    text-align: right;
+    align-items: flex-end;
+    justify-content: right;
+    border-right: 2px solid #a9bdff;
+    margin-right: -2px;
+}
+
+.right-side {
+    text-align: left;
+    align-items: flex-start;
+    justify-content: left;
+    border-left: 2px solid #a9bdff;
+    margin-left: -2px;
+}
+
+.last-exp-left-side {
+    border-right: 2px dashed #a9bdff;
+}
+
+.last-exp-right-side {
+    border-left: 2px dashed #a9bdff;
+}
+
+.left-side-point, 
+.right-side-point {
+    position: absolute;
+    top: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(8, 94, 255);
+    font-size: 25px;
+    background-color: black;
+}
+
+.left-side-point {
+    right: -13px;
+}
+
+.right-side-point {
+    left: -13px;
+}
+
+.title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.company {
+    color: #acdafc;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.date-range {
+    font-size: 14px;
+    font-weight: 400;
+    color: #ddd;
+    text-transform: uppercase;
+}
+
+.description {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+}
+
+.bottom-exp-line {
+    position: absolute;
+    bottom: 20px;
+    width: 60%;
+    height: 2px;
+    background-color: #a9bdff;
+}
+
+.left-side-line {
+    right: 41px;
+}
+
+.right-side-line {
+    left: 41px;
+}
+
+.right-bottom-line-wing {
+    position: absolute;
+    left: -5;
+    bottom: 8px;
+    width: 50px;
+    height: 2px;
+    background-color: #a9bdff;
+    transform: rotate(-30deg);
+}
+
+.left-bottom-line-wing {
+    position: absolute;
+    right: -5;
+    bottom: 8px;
+    width: 50px;
+    height: 2px;
+    background-color: #a9bdff;
+    transform: rotate(30deg);
+}

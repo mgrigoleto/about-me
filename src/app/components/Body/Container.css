@@ -1,0 +1,40 @@
+.gradient-blue-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    padding: 110px 10% 50px 10%;
+    background: #000000;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(18, 0, 158, 1) 100%);
+}
+
+.solid-blue-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    flex-direction: column;
+    padding: 50px 15vw 75px 15vw;
+    background: rgba(18, 0, 158, 1);
+    color: white;
+}
+
+.black-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    padding: 50px 10%;
+    background: black;
+    color: white;
+}
+
+.black-box h1, .solid-blue-box h1 {
+    margin: 0 0 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
