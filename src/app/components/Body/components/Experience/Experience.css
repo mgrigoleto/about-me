@@ -1,3 +1,7 @@
+:root {
+    --timeline-line-color: #567eff;
+}
+
 .timeline-line {
     width: 100%;
     display: flex;
@@ -24,7 +28,7 @@
     text-align: right;
     align-items: flex-end;
     justify-content: right;
-    border-right: 2px solid #a9bdff;
+    border-right: 2px solid var(--timeline-line-color);
     margin-right: -2px;
 }
 
@@ -32,16 +36,16 @@
     text-align: left;
     align-items: flex-start;
     justify-content: left;
-    border-left: 2px solid #a9bdff;
+    border-left: 2px solid var(--timeline-line-color);
     margin-left: -2px;
 }
 
 .last-exp-left-side {
-    border-right: 2px dashed #a9bdff;
+    border-right: 2px dashed var(--timeline-line-color);
 }
 
 .last-exp-right-side {
-    border-left: 2px dashed #a9bdff;
+    border-left: 2px dashed var(--timeline-line-color);
 }
 
 .left-side-point, 
@@ -65,14 +69,14 @@
 }
 
 .title {
-    color: white;
+    color: rgb(99, 72, 255);
     font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .company {
-    color: #acdafc;
+    color: white;
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
@@ -88,7 +92,7 @@
 .description {
     font-size: 18px;
     font-weight: 400;
-    color: white;
+    color: #ccc;
 }
 
 .bottom-exp-line {
@@ -96,7 +100,7 @@
     bottom: 20px;
     width: 60%;
     height: 2px;
-    background-color: #a9bdff;
+    background-color: var(--timeline-line-color);
 }
 
 .left-side-line {
@@ -113,7 +117,7 @@
     bottom: 8px;
     width: 50px;
     height: 2px;
-    background-color: #a9bdff;
+    background-color: var(--timeline-line-color);
     transform: rotate(-30deg);
 }
 
@@ -123,6 +127,6 @@
     bottom: 8px;
     width: 50px;
     height: 2px;
-    background-color: #a9bdff;
+    background-color: var(--timeline-line-color);
     transform: rotate(30deg);
 }

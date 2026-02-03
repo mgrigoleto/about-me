@@ -1,0 +1,25 @@
+#courses-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.course {
+    background-color: black;
+    border-radius: 8px;
+    padding: 15px;
+    width: calc(50% - 10px);
+    box-sizing: border-box;
+}
+
+.course-title {
+    color: #00aced;
+    margin: 0 0 5px 0;
+}
+
+.platform {
+    color: #ff9900;
+    margin: 0 0 10px 0;
+    font-style: italic;
+}
