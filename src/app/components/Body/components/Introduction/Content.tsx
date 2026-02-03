@@ -26,7 +26,7 @@ const getYearsDiff = (year: number): number => {
 
 export const contentPTBR: IntroductionContent = {
     name: "Maurício Grigoleto Belinassi",
-    email: "grigoleto.200@gmail.com",
+    email: "grigoleto.2002@gmail.com",
     intro: "Prazer, meu nome é Maurício e sou Desenvolvedor Full-Stack.",
     listTitle: "Algumas das minhas qualificações incluem:",
     list: [
@@ -72,7 +72,7 @@ export const contentPTBR: IntroductionContent = {
 
 export const contentEN: IntroductionContent = {
     name: "Maurício Grigoleto Belinassi",
-    email: "grigoleto.200@gmail.com",
+    email: "grigoleto.2002@gmail.com",
     intro: "Howdy! My name is Maurício and I'm a Full-Stack Developer.",
     listTitle: "Some of my qualifications include:",
     list: [
