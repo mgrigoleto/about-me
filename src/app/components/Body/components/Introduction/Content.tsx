@@ -82,7 +82,7 @@ export const contentEN: IntroductionContent = {
         },
         {
             icon: <FaCode />,
-            text: `${getYearsDiff(2023)} years of experience in IT;`
+            text: `${getYearsDiff(2023)} years working as a Developer;`
         },
         {
             icon: <FaDatabase />,
