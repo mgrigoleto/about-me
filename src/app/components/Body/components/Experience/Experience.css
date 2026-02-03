@@ -1,5 +1,5 @@
 :root {
-    --timeline-line-color: #567eff;
+    --timeline-line-color: #3967ff;
 }
 
 .timeline-line {
@@ -22,6 +22,37 @@
     width: 40%;
     gap: 2px;
     padding: 70px 25px 30px 25px;
+    filter: saturate(0.2);
+    animation: enlighten 5s infinite;
+    margin: 13px 0 0 0;
+}
+
+@keyframes enlighten {
+    0% {
+      filter: saturate(0.2)
+    }
+    50% {
+      filter: saturate(2);
+    }
+    100% {
+      filter: saturate(0.2);
+    }
+}
+
+#experience-timeline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+#start-point {
+    color: var(--timeline-line-color);
+    font-size: 25px;
+    background-color: black;
+    margin: 0 0 -13px 0;
 }
 
 .left-side {
@@ -50,12 +81,13 @@
 
 .left-side-point, 
 .right-side-point {
+    z-index: 100;
     position: absolute;
-    top: -5px;
+    bottom:-15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(8, 94, 255);
+    color: var(--timeline-line-color);
     font-size: 25px;
     background-color: black;
 }
@@ -69,14 +101,14 @@
 }
 
 .title {
-    color: rgb(99, 72, 255);
+    color: rgb(57, 136, 255);
     font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .company {
-    color: white;
+    color: #ddd;
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
@@ -85,14 +117,14 @@
 .date-range {
     font-size: 14px;
     font-weight: 400;
-    color: #ddd;
+    color: #ccc;
     text-transform: uppercase;
 }
 
 .description {
     font-size: 18px;
     font-weight: 400;
-    color: #ccc;
+    color: #eee;
 }
 
 .bottom-exp-line {

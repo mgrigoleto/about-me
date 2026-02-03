@@ -22,10 +22,13 @@ const Courses = (props: { language: string }) => {
             <div id="courses-wrapper">
                 {courses.map((course, index) => (
                     <div key={index} className="course">
-                        <h2 className='course-title'>{course.title}</h2>
-                        <h4 className='platform'>{course.platform}</h4>
-                        <span className="date-range">{course.start} {course.end && '-'} {course.end}</span>
-                        <p>{course.description}</p>
+                        <div className="course-title">
+                            <span className='title-icon'><>{course.icon}</></span>
+                            <span className='title-text'>{course.title}</span>
+                        </div>
+                        <h4 className='course-platform'>{course.platform}</h4>
+                        <span className="course-date-range">{course.start} {course.end && '-'} {course.end}</span>
+                        <p className='course-description'>{course.description}</p>
                     </div>
                 ))}
             </div>
