@@ -26,7 +26,7 @@ const Courses = (props: { language: string }) => {
                             <span className='title-icon'><>{course.icon}</></span>
                             <span className='title-text'>{course.title}</span>
                         </div>
-                        <h4 className='course-platform'>{course.platform}</h4>
+                        <h4 className='course-platform'><FaGraduationCap style={{fontSize: '22px'}}/> {course.platform}</h4>
                         <span className="course-date-range">{course.start} {course.end && '-'} {course.end}</span>
                         <p className='course-description'>{course.description}</p>
                     </div>

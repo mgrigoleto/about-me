@@ -73,7 +73,7 @@ export const contentPTBR: IntroductionContent = {
 export const contentEN: IntroductionContent = {
     name: "Maurício Grigoleto Belinassi",
     email: "grigoleto.2002@gmail.com",
-    intro: "Howdy! My name is Maurício and I'm a Full-Stack Developer.",
+    intro: "Howdy! My name is Maurício and I'm a Full-Stack Software Developer.",
     listTitle: "Some of my qualifications include:",
     list: [
         {
@@ -82,7 +82,7 @@ export const contentEN: IntroductionContent = {
         },
         {
             icon: <FaCode />,
-            text: `${getYearsDiff(2023)} years working as a Developer;`
+            text: `${getYearsDiff(2023)} years working as a developer;`
         },
         {
             icon: <FaDatabase />,

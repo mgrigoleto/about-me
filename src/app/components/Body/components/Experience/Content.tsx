@@ -52,13 +52,6 @@ export const contentPTBR: ExperienceContent = {
             start: "Outubro de 2025",
             end: "Atualmente",
             description: "Desenvolvimento de interfaces web responsivas e interativas. Implementação de componentes reutilizáveis e manutenção de aplicações existentes."
-        },
-        {
-            title: "",
-            company: "",
-            start: "",
-            end: "",
-            description: ""
         }
     ]
 }

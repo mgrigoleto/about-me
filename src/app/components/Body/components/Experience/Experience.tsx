@@ -18,6 +18,20 @@ const Experience = (props: { language: string }) => {
         }
     }, [props.language])
 
+    const buildLineWing = (left: boolean) => {
+        return (
+            <>
+                {
+                    left && <span className="left-bottom-line-wing" />
+                }
+                <span className={`bottom-exp-line ${left ? 'left-side-line' : 'right-side-line'}`} />
+                {
+                    !left && <span className="right-bottom-line-wing" />
+                }
+            </>
+        )
+    }
+
     return (
         <div className='black-box'>
             <h1> <FaBriefcase /> {props.language === "ptbr" ? contentPTBR.title : contentEN.title}</h1>
@@ -25,34 +39,37 @@ const Experience = (props: { language: string }) => {
                 <div id="start-point">
                     <FaFlagCheckered />
                 </div>
-                {exps.map((exp, index) => (
-                    <div key={index} className="timeline-line">
-                        {index % 2 != 0 && <div className="spacer"></div>}
-                        <div
-                            className={`${index + 1 == exps.length && index % 2 != 0 && 'last-exp-right-side'} ${index + 1 == exps.length && index % 2 == 0 && 'last-exp-left-side'} ${index % 2 == 0 ? 'left-side' : 'right-side'} experience-item`}
-                            style={{animationDelay: `${index * 0.5}s`}}
-                        >
-                            <h3 className="title">{exp.title}</h3>
-                            <p className="company">{exp.company}</p>
-                            <p className="date-range">{exp.start} {exp.end && '-'} {exp.end}</p>
-                            <p className="description">{exp.description}</p>
-                            <span className={`${index % 2 == 0 ? 'left-side-point' : 'right-side-point'}`}>
-                                {index + 1 != exps.length ? <FaCircleDot /> : <></>}
-                            </span>
+                {exps.map((exp, index) => {
+                    const left = index % 2 == 0
+                    const right = index % 2 != 0
 
-                            {/* Wing comming out of the timeline */}
-                            {index + 1 != exps.length &&
-                                <>
-                                    {index % 2 == 0 && <span className="left-bottom-line-wing"></span>}
-                                    <span className={`bottom-exp-line  ${index % 2 == 0 ? 'left-side-line' : 'right-side-line'}`} ></span>
-                                    {index % 2 != 0 && <span className="right-bottom-line-wing"></span>}
-                                </>
-                            }
+                    return (
+                        <div key={index} className="timeline-line">
+                            {right && <div className="spacer"></div>}
+                            <div
+                                className={`
+                                    ${left ?
+                                        'left-side' : 'right-side'} 
+                                                 experience-item`}
+                            >
+                                <h3 className="title">{exp.title}</h3>
+                                <p className="company">{exp.company}</p>
+                                <p className="date-range">
+                                    {exp.start} {exp.end && '-'} {exp.end}
+                                </p>
+                                <p className="description">{exp.description}</p>
+                                <span className={`${left ? 'left-side-point' : 'right-side-point'}`}>
+                                    <FaCircleDot />
+                                </span>
+
+                                {/* Wing comming out of the timeline */}
+                                {buildLineWing(left)}
+                            </div>
+                            {left && <div className="spacer"></div>}
                         </div>
-                        {index % 2 == 0 && <div className="spacer"></div>}
-                    </div>
 
-                ))}
+                    )
+                })}
             </div>
         </div>
     )
