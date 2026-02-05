@@ -51,7 +51,7 @@
         var(--timeline-line-color) 100%
     );
     background-size: 100% 200%;
-    animation: fadingLine 10s linear infinite;
+    animation: fadingLine 5s linear infinite;
 }
 
 @keyframes fadingLine {

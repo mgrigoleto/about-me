@@ -93,13 +93,6 @@ export const contentEN: ExperienceContent = {
             start: "October 2025",
             end: "Present",
             description: "Development of responsive and interactive web interfaces. Implementation of reusable components and maintenance of existing applications."
-        },
-        {
-            title: "",
-            company: "",
-            start: "",
-            end: "",
-            description: ""
         }
     ]
 }

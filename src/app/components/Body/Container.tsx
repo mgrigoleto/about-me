@@ -8,7 +8,9 @@ const Container = (props: { language: string }) => {
     return (
         <>
             <Introduction language={props.language} />
+            <section className="container-spacer-blue-to-black" />
             <Experience language={props.language} />
+            <section className="container-spacer-black-to-blue" />
             <Courses language={props.language} />
         </>
     )

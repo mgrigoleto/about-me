@@ -24,15 +24,17 @@ const Courses = (props: { language: string }) => {
                     <div key={index} className="course">
                         <div className="course-title">
                             <span className='title-icon'><>{course.icon}</></span>
-                            <span className='title-text'>{course.title}</span>
+                            <label className='title-text'>{course.title}</label>
                         </div>
-                        <h4 className='course-platform'><FaGraduationCap style={{fontSize: '22px'}}/> {course.platform}</h4>
-                        <span className="course-date-range">{course.start} {course.end && '-'} {course.end}</span>
-                        <p className='course-description'>{course.description}</p>
+
+                        <div className='course-details'>
+                            <h4 className='course-platform'><FaGraduationCap style={{ fontSize: '22px' }} /> {course.platform}</h4>
+                            <span className="course-date-range">{course.start} {course.end && '-'} {course.end}</span>
+                            <p className='course-description'>{course.description}</p>
+                        </div>
                     </div>
                 ))}
             </div>
-
         </div>
     )
 }
