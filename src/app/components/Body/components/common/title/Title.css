@@ -1,0 +1,9 @@
+.container-title {
+    padding: 25px 0;
+    font-size: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { FaGraduationCap } from 'react-icons/fa'
 import { contentEN, contentPTBR } from './Content'
+import Title from '../common/title/Title';
 
 import "./Courses.css"
 
@@ -18,18 +19,17 @@ const Courses = (props: { language: string }) => {
 
     return (
         <div className='solid-blue-box'>
-            <h1> <FaGraduationCap /> {props.language === "ptbr" ? contentPTBR.title : contentEN.title}</h1>
+            <Title text={props.language === "ptbr" ? contentPTBR.title : contentEN.title}/>
             <div id="courses-wrapper">
                 {courses.map((course, index) => (
                     <div key={index} className="course">
                         <div className="course-title">
-                            <span className='title-icon'><>{course.icon}</></span>
+                            {/* <span className='title-icon'><>{course.icon}</></span> */}
                             <label className='title-text'>{course.title}</label>
                         </div>
 
                         <div className='course-details'>
-                            <h4 className='course-platform'><FaGraduationCap style={{ fontSize: '22px' }} /> {course.platform}</h4>
-                            <span className="course-date-range">{course.start} {course.end && '-'} {course.end}</span>
+                            <span className="course-date-range">{course.platform} | {course.start} {course.end && '-'} {course.end}</span>
                             <p className='course-description'>{course.description}</p>
                         </div>
                     </div>

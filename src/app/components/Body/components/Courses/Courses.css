@@ -1,32 +1,22 @@
 #courses-wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, calc(26vw)));
     gap: 20px;
     width: 100%;
+    justify-content: center;
 }
 
 .course {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    width: calc(30% - 15px);
-    height: 250px;
     flex-direction: column;
     border-radius: 8px;
     overflow: hidden;
-    background:
-        linear-gradient(90deg,
-            black 0%,
-            rgb(0, 6, 61),
-            black 60%);
-    background-size: 200% 100%;
-    animation: lightReflection 3s linear infinite;
+    background: rgb(10, 0, 82);
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 1);
+    padding: 20px 25px;
+    border: 2px solid blue;
 }
 
 .course:hover {
@@ -36,12 +26,10 @@
 .course-title {
     width: 100%;
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
-    background-color: black;
-    color: #ffee00;
-    padding: 0 25px;
-    min-height: 60px;
+    color: white;
 }
 
 .title-icon {
@@ -53,9 +41,9 @@
 .title-text {
     display: flex;
     align-items: center;
-    padding: 0 0 0 10px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
 }
 
 .course-details {
@@ -64,37 +52,21 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 10px 15px;
     gap: 5px;
-}
-
-.course-platform {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    gap: 5px;
-    font-size: 18px;
-    color: #4b7bff;
-    text-transform: uppercase;
 }
 
 .course-date-range {
-    font-size: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 16px;
     text-transform: uppercase;
-    color: #ccc;
+    color: #bbb;
 }
 
 .course-description {
     font-size: 16px;
-    color: #fff;
-}
-
-@keyframes lightReflection {
-    0% {
-        background-position: 100% 0;
-    }
-
-    100% {
-        background-position: -100% 0;
-    }
+    color: #ddd;
 }

@@ -3,8 +3,9 @@ import "./Experience.css"
 import "../../Container.css"
 import { useEffect, useState } from "react"
 import { contentEN, contentPTBR } from "./Content"
-import { FaBriefcase, FaCircleDot } from "react-icons/fa6"
+import { FaCircleDot } from "react-icons/fa6"
 import { FaFlagCheckered } from "react-icons/fa"
+import Title from '../common/title/Title';
 
 const Experience = (props: { language: string }) => {
 
@@ -34,7 +35,7 @@ const Experience = (props: { language: string }) => {
 
     return (
         <div className='black-box'>
-            <h1> <FaBriefcase /> {props.language === "ptbr" ? contentPTBR.title : contentEN.title}</h1>
+            <Title text={props.language === "ptbr" ? contentPTBR.title : contentEN.title}/>
             <div id="experience-timeline">
                 <div id="start-point">
                     <FaFlagCheckered />

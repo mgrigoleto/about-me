@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Quicksand } from "next/font/google";
+import { Quicksand, Saira, Ubuntu } from "next/font/google";
 import "./globals.css";
 
-const quicksand = Quicksand({
+const ubuntu = Saira({
     subsets: ["latin"],
-    weight: ["300", "400", "500", "600", "700"],
+    weight: ["300", "400"],
 });
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${quicksand.className}`}>
+            <body className={`${ubuntu.className}`}>
                 {children}
             </body>
         </html>
