@@ -11,6 +11,7 @@ export type CoursesContent = {
 
 export type CoursesList = {
     icon?: IconType | JSX.Element,
+    graduation?: boolean,
     title?: string,
     platform?: string,
     start?: string,
@@ -19,8 +20,24 @@ export type CoursesList = {
 }
 
 export const contentPTBR: CoursesContent = {
-    title: "Cursos",
+    title: "Graduação e Cursos",
     list: [
+        {
+            title: "Técnico em Informática para Internet",
+            graduation: true,
+            platform: "IFES",
+            start: "01/2018",
+            end: "12/2021",
+            description: "Formação técnica em infraestrutura e desenvolvimento, incluindo redes, sistemas operacionais, servidores, segurança da informação e desenvolvimento de aplicações web."
+        },
+        {
+            title: "Bacharelado em Sistemas de Informação",
+            graduation: true,
+            platform: "Multivix",
+            start: "01/2022",
+            end: "Presente",
+            description: "Formação em gestão de TI e desenvolvimento de software, com foco em análise de requisitos, bancos de dados, arquitetura de sistemas e criação de soluções web e mobile com metodologias ágeis."
+        },
         {
             icon: <TbCloudComputing />,
             title: "IT Essentials",
@@ -81,8 +98,24 @@ export const contentPTBR: CoursesContent = {
 }
 
 export const contentEN: CoursesContent = {
-    title: 'Courses',
+    title: 'Graduation and Courses',
     list: [
+        {
+            title: "Internet Informatics Technician",
+            graduation: true,
+            platform: "IFES",
+            start: "01/2018",
+            end: "12/2021",
+            description: "Technical training in infrastructure and development, covering networks, operating systems, servers, information security, and web application development."
+        },
+        {
+            title: "Bachelor of Information Systems",
+            graduation: true,
+            platform: "Multivix",
+            start: "01/2022",
+            end: "Present",
+            description: "Focus on IT management and software development, including requirements analysis, database design, systems architecture, and web/mobile solutions using agile practices."
+        },
         {
             icon: <TbCloudComputing />,
             title: "IT Essentials",

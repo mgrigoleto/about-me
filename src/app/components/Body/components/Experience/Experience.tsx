@@ -1,6 +1,5 @@
 'use client'
 import "./Experience.css"
-import "../../Container.css"
 import { useEffect, useState } from "react"
 import { contentEN, contentPTBR } from "./Content"
 import { FaCircleDot } from "react-icons/fa6"

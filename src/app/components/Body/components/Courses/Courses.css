@@ -16,11 +16,20 @@
     background: rgb(10, 0, 82);
     transition: all 0.3s ease-in-out;
     padding: 20px 25px;
-    border: 2px solid blue;
+    border: 2px solid transparent;
 }
 
 .course:hover {
-    transform: scale(1.02);
+    cursor: pointer;
+    border: 2px solid blue;
+}
+
+.graduation-course {
+    background: rgb(0, 26, 255);
+}
+
+.graduation-course:hover {
+    border: 2px solid white;
 }
 
 .course-title {

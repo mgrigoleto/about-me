@@ -50,7 +50,7 @@ export const contentPTBR: ExperienceContent = {
             title: "Desenvolvedor Frontend Jr.",
             company: "Quattror Comercial",
             start: "Outubro de 2025",
-            end: "Atualmente",
+            end: "Presente",
             description: "Desenvolvimento de interfaces web responsivas e interativas. Implementação de componentes reutilizáveis e manutenção de aplicações existentes."
         }
     ]

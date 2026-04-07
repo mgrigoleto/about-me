@@ -22,9 +22,8 @@ const Courses = (props: { language: string }) => {
             <Title text={props.language === "ptbr" ? contentPTBR.title : contentEN.title}/>
             <div id="courses-wrapper">
                 {courses.map((course, index) => (
-                    <div key={index} className="course">
+                    <div key={index} className={`${course.graduation && 'graduation-course'} course`}>
                         <div className="course-title">
-                            {/* <span className='title-icon'><>{course.icon}</></span> */}
                             <label className='title-text'>{course.title}</label>
                         </div>
 
