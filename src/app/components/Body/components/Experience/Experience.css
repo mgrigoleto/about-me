@@ -1,6 +1,6 @@
 :root {
-    --timeline-line-color: #3967ff ;
-    --timeline-line-glow-color: rgb(158, 189, 255);
+    --timeline-line-color: #aaa ;
+    --timeline-line-glow-color: #fff;
 }
 
 .timeline-line {
@@ -38,10 +38,10 @@
 #experience-timeline::after {
     content: "";
     position: absolute;
-    top: 30px;
+    top: 35px;
     width: 5px;
     border-radius: 5px;
-    height: calc(100% - 30px);
+    height: calc(100% - 35px);
     background: linear-gradient(
         to bottom,
         var(--timeline-line-color) 0%,
@@ -50,8 +50,8 @@
         var(--timeline-line-color) 65%,
         var(--timeline-line-color) 100%
     );
-    background-size: 100% 200%;
-    animation: fadingLine 5s linear infinite;
+    background-size: 100% 300%;
+    animation: fadingLine 3s linear infinite;
 }
 
 @keyframes fadingLine {
@@ -64,7 +64,7 @@
 }
 
 #start-point {
-    color: var(--timeline-line-color);
+    color: var(--timeline-line-glow-color);
     font-size: 25px;
     background-color: black;
     margin: 0 0 -13px 0;
@@ -106,14 +106,14 @@
 }
 
 .title {
-    color: rgb(57, 136, 255);
+    color: #f3ff8b;
     font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .company {
-    color: #ddd;
+    color: #ccc;
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
@@ -122,14 +122,14 @@
 .date-range {
     font-size: 14px;
     font-weight: 400;
-    color: #ccc;
+    color: #aaa;
     text-transform: uppercase;
 }
 
 .description {
     font-size: 18px;
     font-weight: 400;
-    color: #eee;
+    color: #ccc;
 }
 
 .bottom-exp-line {

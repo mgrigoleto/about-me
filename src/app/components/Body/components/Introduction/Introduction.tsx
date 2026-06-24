@@ -3,6 +3,7 @@ import { contentEN, contentPTBR } from "./Content"
 import "./Introduction.css"
 import "../../Container.css"
 import { useEffect, useState } from "react"
+import Beams from "../common/BeamsBackground/Beams"
 
 const Introduction = (props: { language: string }) => {
 
@@ -17,7 +18,19 @@ const Introduction = (props: { language: string }) => {
     }, [props.language])
 
     return (
-        <div className="gradient-blue-box">
+        <div className="introdutcion-box">
+            <section className='beams-grid-bg'>
+                <Beams
+                    beamWidth={1.8}
+                    beamHeight={30}
+                    beamNumber={120}
+                    lightColor="#9e9e9e"
+                    speed={5}
+                    noiseIntensity={2}
+                    scale={0.2}
+                    rotation={35}
+                />
+            </section>
             <div id="img-div">
                 <img id="pfp" src={"pfp.png"} />
                 <h1>{intro.name}</h1>

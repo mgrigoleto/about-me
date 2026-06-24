@@ -1,0 +1,38 @@
+.beams-container {
+    position: relative;
+
+    -webkit-mask-image: 
+        linear-gradient(
+            to bottom,
+            transparent 0px,
+            black 250px,
+            black calc(100% - 250px),
+            transparent 100%
+        ),
+        linear-gradient(
+            to right,
+            transparent 0px,
+            black 250px,
+            black calc(100% - 250px),
+            transparent 100%
+        );
+        
+    mask-image: 
+        linear-gradient(
+            to bottom,
+            transparent 0px,
+            black 250px,
+            black calc(100% - 250px),
+            transparent 100%
+        ),
+        linear-gradient(
+            to right,
+            transparent 0px,
+            black 250px,
+            black calc(100% - 250px),
+            transparent 100%
+        );
+
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+}

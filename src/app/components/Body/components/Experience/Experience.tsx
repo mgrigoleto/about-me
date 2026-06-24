@@ -5,6 +5,7 @@ import { contentEN, contentPTBR } from "./Content"
 import { FaCircleDot } from "react-icons/fa6"
 import { FaFlagCheckered } from "react-icons/fa"
 import Title from '../common/title/Title';
+import DotGrid from "../common/DotGridBackground/DotGrid"
 
 const Experience = (props: { language: string }) => {
 
@@ -34,7 +35,20 @@ const Experience = (props: { language: string }) => {
 
     return (
         <div className='black-box'>
-            <Title text={props.language === "ptbr" ? contentPTBR.title : contentEN.title}/>
+            <div className="dot-grid-bg">
+                <DotGrid
+                    dotSize={4}
+                    gap={15}
+                    baseColor="#110e16"
+                    activeColor="#302d3a"
+                    proximity={120}
+                    shockRadius={50}
+                    shockStrength={5}
+                    resistance={750}
+                    returnDuration={1.5}
+                />
+            </div>
+            <Title text={props.language === "ptbr" ? contentPTBR.title : contentEN.title} />
             <div id="experience-timeline">
                 <div id="start-point">
                     <FaFlagCheckered />

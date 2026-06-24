@@ -1,4 +1,5 @@
 #courses-wrapper {
+    z-index: 1;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, calc(26vw)));
     gap: 20px;
@@ -13,23 +14,24 @@
     flex-direction: column;
     border-radius: 8px;
     overflow: hidden;
-    background: rgb(10, 0, 82);
+    background: rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease-in-out;
     padding: 20px 25px;
     border: 2px solid transparent;
+    box-shadow: 5px 5px 15px #555;
 }
 
 .course:hover {
-    cursor: pointer;
-    border: 2px solid blue;
+    scale: 1.01;
+    box-shadow: 5px 5px 15px #aaa;
 }
 
 .graduation-course {
-    background: rgb(0, 26, 255);
+    border: 2px solid white;
 }
 
 .graduation-course:hover {
-    border: 2px solid white;
+    box-shadow: 5px 5px 15px white;
 }
 
 .course-title {

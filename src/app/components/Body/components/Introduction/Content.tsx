@@ -67,7 +67,7 @@ export const contentPTBR: IntroductionContent = {
             text: `Fluente em Inglês;`
         }
     ],
-    outro: "e muito mais..."
+    outro: ""
 }
 
 export const contentEN: IntroductionContent = {
@@ -113,5 +113,5 @@ export const contentEN: IntroductionContent = {
             text: `Fluent in English;`
         }
     ],
-    outro: "and much more..."
+    outro: ""
 }
