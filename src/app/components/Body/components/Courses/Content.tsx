@@ -93,6 +93,14 @@ export const contentPTBR: CoursesContent = {
             start: "11/2025",
             end: "12/2025",
             description: "Especialização em design de interfaces (UI) e experiência do usuário (UX) com foco em produtos digitais. Domínio avançado de Figma, prototipagem de alta fidelidade e aplicação de princípios visuais para web e mobile."
+        },
+        {
+            icon: <FaLaptopCode  />,
+            title: "React 19 e Next.js 15 com Typescript",
+            platform: "Udemy",
+            start: "01/2025",
+            end: "06/2026",
+            description: "Capacitação em React 19 e Next.js 15, com foco em App Router, Server Components, Server Actions e desenvolvimento de aplicações web escaláveis."
         }
     ]
 }
@@ -171,6 +179,14 @@ export const contentEN: CoursesContent = {
             start: "11/2025",
             end: "12/2025",
             description: "UI/UX specialization for digital products. Mastery of Figma, high-fidelity prototyping, and visual design principles for web and mobile."
+        },
+        {
+            icon: <FaLaptopCode  />,
+            title: "React 19 and Next.js with Typescript",
+            platform: "Udemy",
+            start: "01/2025",
+            end: "06/2026",
+            description: "Training in React 19 and Next.js 15, focused on App Router, Server Components, Server Actions, and scalable web application development."
         }
     ]
 }
