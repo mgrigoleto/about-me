@@ -50,6 +50,20 @@
     pointer-events: none;
 }
 
+.space-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-mask-image:
+        linear-gradient(to bottom, transparent 0, black 80px, black calc(100% - 80px), transparent 100%),
+        linear-gradient(to right, transparent 0, black 48px, black calc(100% - 48px), transparent 100%);
+    mask-image:
+        linear-gradient(to bottom, transparent 0, black 80px, black calc(100% - 80px), transparent 100%),
+        linear-gradient(to right, transparent 0, black 48px, black calc(100% - 48px), transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+}
+
 .beams-grid-bg {
     position: absolute;
     top: 0;
@@ -57,4 +71,11 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
+}
+
+@media (max-width: 800px) {
+    .black-box,
+    .courses-box {
+        padding: 16px 20px 56px;
+    }
 }

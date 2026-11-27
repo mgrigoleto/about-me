@@ -7,23 +7,41 @@
     justify-content: center;
 }
 
+.course-tilt {
+    height: 100%;
+    perspective: 900px;
+}
+
 .course {
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+    height: 100%;
     border-radius: 8px;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease-in-out;
+    background: rgba(0, 0, 0, 0.6);
+    transform-style: preserve-3d;
+    transition: box-shadow 0.3s ease;
     padding: 20px 25px;
     border: 2px solid transparent;
-    box-shadow: 5px 5px 15px #555;
+    box-shadow: 1px 1px 10px #555;
+    will-change: transform;
 }
 
 .course:hover {
-    scale: 1.01;
-    box-shadow: 5px 5px 15px #aaa;
+    box-shadow: 1px 1px 10px #fff;
+}
+
+.course-glare {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    mix-blend-mode: soft-light;
 }
 
 .graduation-course {
@@ -31,7 +49,13 @@
 }
 
 .graduation-course:hover {
-    box-shadow: 5px 5px 15px white;
+    box-shadow: 1px 1px 10px #aaa;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .course {
+        will-change: auto;
+    }
 }
 
 .course-title {
@@ -50,10 +74,11 @@
 }
 
 .title-text {
-    display: flex;
-    align-items: center;
+    display: block;
+    width: 100%;
     font-weight: bold;
     font-size: 22px;
+    line-height: 1.25;
     text-transform: uppercase;
 }
 
@@ -80,4 +105,14 @@
 .course-description {
     font-size: 16px;
     color: #ddd;
+}
+
+@media (max-width: 800px) {
+    #courses-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .title-text {
+        font-size: 18px;
+    }
 }

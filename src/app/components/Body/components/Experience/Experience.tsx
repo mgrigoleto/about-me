@@ -2,10 +2,9 @@
 import "./Experience.css"
 import { useEffect, useState } from "react"
 import { contentEN, contentPTBR } from "./Content"
-import { FaCircleDot } from "react-icons/fa6"
-import { FaFlagCheckered } from "react-icons/fa"
 import Title from '../common/title/Title';
-import DotGrid from "../common/DotGridBackground/DotGrid"
+import Constellation from "../common/Constellation/Constellation"
+import { assemble } from "../../assemble"
 
 const Experience = (props: { language: string }) => {
 
@@ -19,39 +18,15 @@ const Experience = (props: { language: string }) => {
         }
     }, [props.language])
 
-    const buildLineWing = (left: boolean) => {
-        return (
-            <>
-                {
-                    left && <span className="left-bottom-line-wing" />
-                }
-                <span className={`bottom-exp-line ${left ? 'left-side-line' : 'right-side-line'}`} />
-                {
-                    !left && <span className="right-bottom-line-wing" />
-                }
-            </>
-        )
-    }
-
     return (
         <div className='black-box'>
             <div className="dot-grid-bg">
-                <DotGrid
-                    dotSize={4}
-                    gap={15}
-                    baseColor="#110e16"
-                    activeColor="#302d3a"
-                    proximity={120}
-                    shockRadius={50}
-                    shockStrength={5}
-                    resistance={750}
-                    returnDuration={1.5}
-                />
+                <Constellation />
             </div>
             <Title text={props.language === "ptbr" ? contentPTBR.title : contentEN.title} />
             <div id="experience-timeline">
                 <div id="start-point">
-                    <FaFlagCheckered />
+                    <span className="timeline-star timeline-star-start" />
                 </div>
                 {exps.map((exp, index) => {
                     const left = index % 2 == 0
@@ -61,10 +36,8 @@ const Experience = (props: { language: string }) => {
                         <div key={index} className="timeline-line">
                             {right && <div className="spacer"></div>}
                             <div
-                                className={`
-                                    ${left ?
-                                        'left-side' : 'right-side'} 
-                                                 experience-item`}
+                                className={`${left ? "left-side" : "right-side"} experience-item`}
+                                {...assemble(index % 2)}
                             >
                                 <h3 className="title">{exp.title}</h3>
                                 <p className="company">{exp.company}</p>
@@ -72,12 +45,10 @@ const Experience = (props: { language: string }) => {
                                     {exp.start} {exp.end && '-'} {exp.end}
                                 </p>
                                 <p className="description">{exp.description}</p>
-                                <span className={`${left ? 'left-side-point' : 'right-side-point'}`}>
-                                    <FaCircleDot />
+                                <span className="timeline-node">
+                                    <span className="timeline-star" />
                                 </span>
-
-                                {/* Wing comming out of the timeline */}
-                                {buildLineWing(left)}
+                                <span className="timeline-branch" />
                             </div>
                             {left && <div className="spacer"></div>}
                         </div>

@@ -1,0 +1,69 @@
+[data-assemble] {
+    --reveal: 0;
+    opacity: 0;
+    transform: translateY(32px);
+}
+
+[data-assemble].is-in {
+    animation: assemble-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: calc(var(--reveal) * 80ms);
+}
+
+.left-side[data-assemble] {
+    transform: translateX(-40px);
+}
+
+.right-side[data-assemble] {
+    transform: translateX(40px);
+}
+
+.left-side[data-assemble].is-in {
+    animation-name: assemble-left;
+}
+
+.right-side[data-assemble].is-in {
+    animation-name: assemble-right;
+}
+
+@keyframes assemble-up {
+    from {
+        opacity: 0;
+        transform: translateY(32px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes assemble-left {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes assemble-right {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-assemble],
+    .left-side[data-assemble],
+    .right-side[data-assemble] {
+        opacity: 1;
+        transform: none;
+        animation: none;
+    }
+}

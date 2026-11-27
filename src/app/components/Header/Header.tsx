@@ -15,11 +15,11 @@ const Header = (props: { setCurrLanguage: any, currLanguage: string }) => {
             <div id="language-select-div">
                 <button className={props.currLanguage == "en" ? "active-language" : ""} onClick={() => props.setCurrLanguage("en")} title="English">
                     <US className="icon-language" />
-                    EN
+                    <span>EN</span>
                 </button>
                 <button className={props.currLanguage == "ptbr" ? "active-language" : ""} onClick={() => props.setCurrLanguage("ptbr")} title="Português Brasil">
                     <BR className="icon-language" />
-                    PT
+                    <span>PT</span>
                 </button>
             </div>
         </div>
