@@ -1,11 +1,10 @@
 import { JSX } from "react";
-import { IconType } from "react-icons";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export type HeaderContentItem = {
     title: string;
     url?: string;
-    icon?: IconType | JSX.Element;
+    icon?: JSX.Element;
 };
 
 export const items: HeaderContentItem[] = [

@@ -1,5 +1,4 @@
 import { JSX } from "react"
-import { IconType } from "react-icons"
 import { FaDatabase, FaGraduationCap, FaLaptopCode, FaPencilRuler, FaProjectDiagram, FaUserGraduate } from "react-icons/fa"
 
 export type IntroductionHighlight = {
@@ -19,7 +18,7 @@ export type IntroductionContent = {
 }
 
 export type InfoList = {
-    icon?: IconType | JSX.Element,
+    icon?: JSX.Element,
     text: string
 }
 
